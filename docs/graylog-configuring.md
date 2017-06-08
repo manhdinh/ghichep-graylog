@@ -2,7 +2,7 @@
 Graylog Collector Sidecar là một hệ thống quản lý cấu hình cho các log collector khác nhau, được gọi là các **Backend*. Graylog node hoạt động như một
 hub tập trung chứa các cấu hình của các log collector
 
-![graylog](/imagescollector-sidecar.png)
+![graylog](/images/collector-sidecar.png)
 
 Các cấu hình được quản lý tập trung thông qua giao diện Graylog Web. Với những yêu cầu riêng, các cấu hình raw backend, Snippet được gọi, và có thể
 tùy chọn lưu trữ trực tiếp trong Graylog.
@@ -233,48 +233,48 @@ vào một trong chúng, một trang trạng thái với các thông tin cấu h
 **Step 1**
 Tạo **Beat input** để collector có thể gửi data đến. Click vào `System -> Input` và khởi động một global Beat input với địa chỉ là 0.0.0.0 và port 5044.
 
-![graylog](/imagesstep1.png)
+![graylog](/images/step1.png)
 
 **Step 2**
 
 Chuyển qua cấu hình collector. Trên Graylog Webinterface click vào : System -> Collectors -> Manage configurations
 
-![graylog](/imagesstep2.png)
+![graylog](/images/step2.png)
 
 **Step 3**
 
 Tạo một cấu hình mới
 
-![graylog](/imagesstep3-1.png)
+![graylog](/images/step3-1.png)
 
 **Step 4**
 
 Thêm tên cho cấu hình
 
-![graylog](/imagesstep3-2.png)
+![graylog](/images/step3-2.png)
 
 **Step 5**
 
 Click vào cấu hình mới và tạo Filebeat output.
 
-![graylog](/imagesstep4.png)
+![graylog](/images/step4.png)
 
 **Step 6**
 
 Tạo Filebeat file input để thu thập Apache log
 
-![graylog](/imagesstep5.png)
+![graylog](/images/step5.png)
 
 **Step 7**
 
 Tag file cấu hình với tag là `apache`, sau đó ấn nút `Update tags`
 
-![graylog](/imagesstep6.png)
+![graylog](/images/step6.png)
 
 **Step 8**
 Khi bạn start Sidecar với tag `apache` sẽ có output :
 
-![graylog](/imagesstep7.png)
+![graylog](/images/step7.png)
 
 ## 4. Bảo mật giao tiếp Sidecar
 
